@@ -1,0 +1,562 @@
+/* styles for my portfolio site */
+/* black background, white text, white boxes for the project text */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Figtree", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: white;
+}
+
+img, iframe {
+  display: block;
+  max-width: 100%;
+  border: none;
+}
+
+/* keeps everything in the middle of the screen */
+.wrap {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+
+/* ---------- top of the page ---------- */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.topbar .myname {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+}
+
+.menu a {
+  color: #9d9d9d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.menu .current {
+  color: white;
+  text-decoration: underline;
+}
+
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding-top: 60px;
+}
+
+.hello {
+  color: #9d9d9d;
+  font-size: 22px;
+}
+
+.hero h1 {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -3px;
+  margin-top: 10px;
+}
+
+.intro {
+  color: #9d9d9d;
+  font-size: 20px;
+  max-width: 520px;
+  margin-top: 24px;
+}
+
+
+/* ---------- the boxes that hold a video or a picture ---------- */
+
+.media {
+  background-color: #101010;
+  border: 1px solid #2a2a2a;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media img, .media iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media.nocrop img {
+  object-fit: contain;
+}
+
+.media.ownshape img {
+  height: auto;
+  object-fit: contain;
+}
+
+/* the grey "screenshot goes here" text */
+.media p {
+  color: #6f6f6f;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+}
+
+.banner {
+  aspect-ratio: 21 / 9;
+  margin-top: 70px;
+}
+
+
+/* ---------- sections ---------- */
+
+.section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 25px;
+  margin-bottom: 55px;
+}
+
+.section-top h2 {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.section-top p {
+  color: #9d9d9d;
+}
+
+
+/* ---------- projects ---------- */
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* puts the gap between the two */
+  margin-bottom: 90px;
+}
+
+.project .picture {
+  width: 56%;
+}
+
+.project .textbox {
+  width: 40%;
+  background-color: white;
+  color: black;
+  padding: 40px;
+}
+
+/* every second project has the video on the other side */
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.textbox a {
+  color: black;
+}
+
+.number {
+  color: #565656;
+  font-size: 15px;
+}
+
+.textbox h3 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-top: 8px;
+}
+
+.textbox p {
+  margin-top: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.tags li {
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  padding: 1px 10px;
+  color: #565656;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.links {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.links a {
+  margin-right: 20px;
+}
+
+
+/* ---------- the white box at the end of the projects ---------- */
+
+.morebox {
+  background-color: white;
+  color: black;
+  padding: 45px;
+}
+
+.morebox a {
+  color: black;
+}
+
+.morebox h3 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.morebox p {
+  margin-top: 14px;
+  max-width: 700px;
+}
+
+.morebox .morelink {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+
+/* ---------- contact ---------- */
+
+.email {
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  display: inline-block;
+  word-break: break-word;
+}
+
+.social {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.social a {
+  margin-right: 28px;
+}
+
+
+/* ---------- about page ---------- */
+
+.pagetitle {
+  padding-top: 60px;
+  padding-bottom: 45px;
+}
+
+.pagetitle h1 {
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+.about-top {
+  display: flex;
+  gap: 30px;
+}
+
+.aboutbox {
+  width: 66%;
+  background-color: white;
+  color: black;
+  padding: 45px;
+  /* centers the text so the box lines up with the photo next to it */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutbox p + p {
+  margin-top: 16px;
+}
+
+.photo {
+  width: 34%;
+  aspect-ratio: 4 / 5;
+  background-color: #101010;
+  border: 1px solid #2a2a2a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo p {
+  color: #6f6f6f;
+  font-size: 15px;
+}
+
+.career {
+  margin-top: 90px;
+}
+
+.careergroup {
+  margin-bottom: 50px;
+}
+
+.careergroup h3 {
+  font-size: 17px;
+  font-weight: 700;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 14px;
+}
+
+.entry {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #2a2a2a;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.entry .date {
+  color: #9d9d9d;
+  width: 170px;
+  flex-shrink: 0;
+}
+
+.entry h4 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.entry .what {
+  color: #9d9d9d;
+  margin-top: 6px;
+  max-width: 600px;
+}
+
+
+/* ---------- bottom of the page ---------- */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #2a2a2a;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  color: #9d9d9d;
+  font-size: 15px;
+}
+
+
+/* ---------- youtube videos ---------- */
+/* the thumbnail with the play button, before you click it */
+
+.video-button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.video-button img {
+  opacity: 0.8;
+}
+
+.video-button:hover img {
+  opacity: 1;
+}
+
+.play-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -35px;
+  margin-left: -35px;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* the little triangle in the middle of the circle */
+.play-circle:after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  border-left: 18px solid black;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+.video-button:hover .play-circle {
+  background-color: #eeeeee;
+}
+
+
+/* ---------- phones and small screens ---------- */
+
+@media (max-width: 800px) {
+
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    letter-spacing: -1px;
+  }
+
+  .pagetitle h1 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .section-top h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .intro {
+    font-size: 18px;
+  }
+
+  .banner {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* projects go under each other instead of next to each other */
+  .project {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  .project .picture {
+    width: auto;
+  }
+
+  .project .textbox {
+    width: auto;
+    margin-top: 20px;
+    padding: 25px;
+  }
+
+  .textbox h3 {
+    font-size: 26px;
+  }
+
+  .about-top {
+    display: block;
+  }
+
+  .aboutbox {
+    width: auto;
+    padding: 25px;
+  }
+
+  .photo {
+    width: auto;
+    aspect-ratio: 3 / 2;
+    margin-top: 20px;
+  }
+
+  .entry {
+    display: block;
+  }
+
+  .entry .date {
+    width: auto;
+  }
+
+  .email {
+    font-size: 30px;
+    letter-spacing: -1px;
+  }
+
+  .play-circle {
+    width: 54px;
+    height: 54px;
+    margin-top: -27px;
+    margin-left: -27px;
+  }
+
+  .play-circle:after {
+    top: 17px;
+    left: 21px;
+    border-left: 15px solid black;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+
+  .footer {
+    display: block;
+  }
+}
